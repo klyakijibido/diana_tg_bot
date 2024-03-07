@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: diana_tg_bot_production
-  username: diana_tg_bot
+  database: diana_tg_bot
+  username: deploy
   password: <%= ENV['DIANA_TG_BOT_DATABASE_PASSWORD'] %>
