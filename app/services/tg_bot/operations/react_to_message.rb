@@ -14,7 +14,9 @@ module TgBot
         # будем реагировать на его текст
         case @message.text
         when "/start"
-          SendMessage.call(chat_id, 'Hello!')
+          SendMessage.call(chat_id, hello_text)
+        when '/lips'
+          SendVideo.call(chat_id, 'BAACAgIAAxkBAAIBB2Xhkbz_x1lLngJtZ4U6TrfsvxZeAALlQQAC_S4JS1xjvxnAXoI9NAQ')
         else
           SendMessage.call(chat_id, 'Unknown Command')
         end
@@ -26,6 +28,13 @@ module TgBot
 
       def chat_id
         message.chat.id
+      end
+
+      def hello_text
+        <<~MESSAGE_TEXT
+          Привет!
+          Нажми /lips, чтобы получить подарок
+        MESSAGE_TEXT
       end
     end
   end
