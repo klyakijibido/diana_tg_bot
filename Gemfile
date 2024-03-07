@@ -8,6 +8,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 gem 'dotenv-rails'
+gem 'httparty'
 
 group :development, :test do
   gem 'pry-rails'
