@@ -19,6 +19,7 @@ module TgBot
           SendVideo.call(chat_id, 'BAACAgIAAxkBAAIBB2Xhkbz_x1lLngJtZ4U6TrfsvxZeAALlQQAC_S4JS1xjvxnAXoI9NAQ')
         else
           SendMessage.call(chat_id, 'Unknown Command')
+          SendMessage.call(chat_id, hello_text)
         end
       end
 
