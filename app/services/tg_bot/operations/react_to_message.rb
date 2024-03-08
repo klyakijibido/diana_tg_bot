@@ -18,7 +18,7 @@ module TgBot
         when '/lips'
           SendVideo.call(chat_id, 'BAACAgIAAxkBAAIBB2Xhkbz_x1lLngJtZ4U6TrfsvxZeAALlQQAC_S4JS1xjvxnAXoI9NAQ')
         else
-          SendMessage.call(chat_id, 'Unknown Command')
+          SendMessage.call(chat_id, unknown_command_text)
         end
       end
 
@@ -33,6 +33,12 @@ module TgBot
       def hello_text
         <<~MESSAGE_TEXT
           Привет!
+          Нажми /lips, чтобы получить подарок
+        MESSAGE_TEXT
+      end
+
+      def unknown_command_text
+        <<~MESSAGE_TEXT
           Нажми /lips, чтобы получить подарок
         MESSAGE_TEXT
       end
