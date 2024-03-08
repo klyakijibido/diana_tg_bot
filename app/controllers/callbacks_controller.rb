@@ -1,4 +1,9 @@
 class CallbacksController < ApplicationController
+  def index
+    head :ok
+    return
+  end
+
   def telegram
     unless telegram_header == ENV.fetch("TELEGRAM_BOT_SECRET")
       head :forbidden
